@@ -75,10 +75,15 @@ sub gen_tlv_parse_field($$$$) {
 			$size = $tlv_get{$prefix};
 			die "Unknown size element type '$prefix'" if not defined $size;
 
+			my $curvar = "$var\_n";
+			if (rindex($var,"]") == length($var)-1) {
+				$curvar = substr($var, 0, index($var, "["))."\_i";
+				$data .= $indent."$curvar = 0;\n";
+			}
 			($var_data, $var_iterator) =
-				gen_tlv_parse_field($var."[$var\_n]", $elem->{"array-element"}, $n_indent + 1, "i$iterator");
+				gen_tlv_parse_field($var."[$curvar]", $elem->{"array-element"}, $n_indent + 1, "i$iterator");
 
-			$var_data .= $indent."\t$var\_n++;\n";
+			$var_data .= $indent."\t$curvar++;\n";
 			$data .= $indent."$iterator = $size;\n";
 			$data .= $indent."$var = __qmi_alloc_static($iterator * sizeof($var\[0]));\n";
 			$data .= $indent."while($iterator\-- > 0) {\n";

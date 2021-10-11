@@ -45,6 +45,7 @@ sub gen_tlv_type($$$) {
 		}
 		my ($type, $no_set_field) = gen_tlv_type("*$cname", $elem->{"array-element"}, $indent);
 		return undef if not defined $type;
+		return $indent."unsigned int ".substr($cname,1)."\_i;$type", 1 if (!rindex($cname,"*",0));
 		return $indent."unsigned int $cname\_n;$type", 1;
 	} elsif ($type eq "sequence" or $type eq "struct") {
 		my $contents = $elem->{"contents"};
