@@ -51,6 +51,7 @@ sub gen_tlv_type($$$) {
 		my $data = "struct {";
 
 		foreach my $field (@$contents) {
+			$field = gen_common_ref($field);
 			my $_cname = gen_cname($field->{name});
 			my ($_data, $no_set_field) = gen_tlv_type($_cname, $field, "$indent\t");
 			$data .= $_data;
@@ -68,6 +69,7 @@ sub gen_tlv_struct($$) {
 	my $_data = "";
 
 	foreach my $field (@$data) {
+		$field = gen_common_ref($field);
 		my $cname = gen_cname($field->{name});
 		my ($data, $no_set_field) = gen_tlv_type($cname, $field, "\n\t\t");
 

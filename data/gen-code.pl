@@ -215,6 +215,7 @@ EOF
 		switch(tlv->type) {
 EOF
 		foreach my $field (@$data) {
+			$field = gen_common_ref($field);
 			my $cname = gen_cname($field->{name});
 			gen_tlv_type($cname, $field, $i++);
 		}
@@ -414,6 +415,7 @@ sub gen_set_func($$)
 
 EOF
 	foreach my $field (@$fields) {
+		$field = gen_common_ref($field);
 		my $cname = gen_cname($field->{name});
 		gen_tlv_attr_set($cname, $field);
 	}
