@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 /*
- * libqmi-glib -- GLib/GIO based library to control QMI devices
+ * uqmi -- tiny QMI support implementation
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -25,18 +25,12 @@
 #ifndef _LIBQMI_GLIB_QMI_ENUMS_WDS_H_
 #define _LIBQMI_GLIB_QMI_ENUMS_WDS_H_
 
-#if !defined (__LIBQMI_GLIB_H_INSIDE__) && !defined (LIBQMI_GLIB_COMPILATION)
-#error "Only <libqmi-glib.h> can be included directly."
-#endif
-
 /**
  * SECTION: qmi-enums-wds
  *
  * This section defines enumerations and flags used in the WDS service
  * interface.
  */
-
-#include <glib.h>
 
 /*****************************************************************************/
 /* Helper enums for the 'QMI WDS Start Network' message */
@@ -291,20 +285,6 @@ typedef enum { /*< since=1.0 >*/
     QMI_WDS_VERBOSE_CALL_END_REASON_TYPE_EHRPD    = 8,
     QMI_WDS_VERBOSE_CALL_END_REASON_TYPE_IPV6     = 9
 } QmiWdsVerboseCallEndReasonType;
-
-/**
- * qmi_wds_verbose_call_end_reason_get_string:
- * @type: a #QmiWdsVerboseCallEndReasonType.
- * @reason: the reason id.
- *
- * Get verbose call end reason based on the reason type.
- *
- * Returns: (transfer none): a string with the reason, or %NULL if not found. Do not free the returned value.
- *
- * Since: 1.0
- */
-const gchar *qmi_wds_verbose_call_end_reason_get_string (QmiWdsVerboseCallEndReasonType type,
-                                                         gint16                         reason);
 
 /**
  * QmiWdsVerboseCallEndReasonMip:

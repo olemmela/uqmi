@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 /*
- * libqmi-glib -- GLib/GIO based library to control QMI devices
+ * uqmi -- tiny QMI support implementation
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -23,10 +23,6 @@
 
 #ifndef _LIBQMI_GLIB_QMI_ENUMS_PDS_H_
 #define _LIBQMI_GLIB_QMI_ENUMS_PDS_H_
-
-#if !defined (__LIBQMI_GLIB_H_INSIDE__) && !defined (LIBQMI_GLIB_COMPILATION)
-#error "Only <libqmi-glib.h> can be included directly."
-#endif
 
 /**
  * SECTION: qmi-enums-pds

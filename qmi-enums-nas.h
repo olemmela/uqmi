@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 /*
- * libqmi-glib -- GLib/GIO based library to control QMI devices
+ * uqmi -- tiny QMI support implementation
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -23,10 +23,6 @@
 
 #ifndef _LIBQMI_GLIB_QMI_ENUMS_NAS_H_
 #define _LIBQMI_GLIB_QMI_ENUMS_NAS_H_
-
-#if !defined (__LIBQMI_GLIB_H_INSIDE__) && !defined (LIBQMI_GLIB_COMPILATION)
-#error "Only <libqmi-glib.h> can be included directly."
-#endif
 
 /**
  * SECTION: qmi-enums-nas
@@ -645,22 +641,6 @@ typedef enum { /*< since=1.0 >*/
     QMI_NAS_NETWORK_DESCRIPTION_ENCODING_GSM         = 0x09
 } QmiNasNetworkDescriptionEncoding;
 
-/**
- * qmi_nas_read_string_from_network_description_encoded_array:
- * @encoding: a #QmiNasNetworkDescriptionEncoding.
- * @array: (element-type guint8): a #GArray with the encoded data.
- *
- * Converts the encoded data in @array to UTF-8 and returns a newly allocated
- * NUL-terminated string.
- *
- * Returns: the UTF-8 encoded string, or %NULL if an error happened during the conversion.
- * The returned value should be freed with g_free().
- *
- * Since: 1.24.6
- */
-gchar *qmi_nas_read_string_from_network_description_encoded_array (QmiNasNetworkDescriptionEncoding  encoding,
-                                                                   const GArray                     *array);
-
 /*****************************************************************************/
 /* Helper enums for the 'QMI NAS Get Preferred Networks' request/response */
 
@@ -1220,22 +1200,6 @@ typedef enum { /*< since=1.18 >*/
     QMI_NAS_PLMN_ENCODING_SCHEME_GSM    = 0,
     QMI_NAS_PLMN_ENCODING_SCHEME_UCS2LE = 1,
 } QmiNasPlmnEncodingScheme;
-
-/**
- * qmi_nas_read_string_from_plmn_encoded_array:
- * @encoding: a #QmiNasPlmnEncodingScheme.
- * @array: (element-type guint8): a #GArray with the encoded data.
- *
- * Converts the encoded data in @array to UTF-8 and returns a newly allocated
- * NUL-terminated string.
- *
- * Returns: the UTF-8 encoded string, or %NULL if an error happened during the conversion.
- * The returned value should be freed with g_free().
- *
- * Since: 1.24.6
- */
-gchar *qmi_nas_read_string_from_plmn_encoded_array (QmiNasPlmnEncodingScheme  encoding,
-                                                    const GArray             *array);
 
 /**
  * QmiNasNetworkNameDisplayCondition:
