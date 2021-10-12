@@ -35,7 +35,7 @@ sub gen_tlv_type($$$) {
 	if ($tlv_types{$ptype}) {
 		return $indent.$tlv_types{$ptype}." $cname;";
 	} elsif ($tlv_types{$type}) {
-		return $indent."$ptype $cname;";
+		return $indent.$tlv_types{$type}." $cname;";
 	} elsif ($type eq "string") {
 		return $indent."char *$cname;", 1;
 	} elsif ($type eq "array") {
