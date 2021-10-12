@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 /*
- * uqmi -- tiny QMI support implementation
+ * libqmi-glib -- GLib/GIO based library to control QMI devices
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,6 +18,7 @@
  * Boston, MA 02110-1301 USA.
  *
  * Copyright (C) 2012 Google Inc.
+ * Copyright (C) 2012-2017 Aleksander Morgado <aleksander@aleksander.es>
  */
 
 #ifndef _LIBQMI_GLIB_QMI_ENUMS_PRIVATE_H_
@@ -81,5 +82,7 @@ typedef enum {
     QMI_SERVICE_FLAG_RESPONSE   = 1 << 1,
     QMI_SERVICE_FLAG_INDICATION = 1 << 2
 } QmiServiceFlag;
+
+
 
 #endif /* _LIBQMI_GLIB_QMI_ENUMS_PRIVATE_H_ */
