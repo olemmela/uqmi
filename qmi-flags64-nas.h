@@ -107,18 +107,18 @@ typedef enum { /*< since=1.0 >*/
     QMI_NAS_BAND_PREFERENCE_BC_12            = 1 << 28,
     QMI_NAS_BAND_PREFERENCE_BC_14            = 1 << 29,
     /* Bit 30 reserved */
-    QMI_NAS_BAND_PREFERENCE_BC_15            = ((guint64) 1) << 31,
+    QMI_NAS_BAND_PREFERENCE_BC_15            = ((uint64_t) 1) << 31,
     /* Bits 32-47 reserved */
-    QMI_NAS_BAND_PREFERENCE_WCDMA_2600       = ((guint64) 1) << 48,
-    QMI_NAS_BAND_PREFERENCE_WCDMA_900        = ((guint64) 1) << 49,
-    QMI_NAS_BAND_PREFERENCE_WCDMA_1700_JAPAN = ((guint64) 1) << 50,
+    QMI_NAS_BAND_PREFERENCE_WCDMA_2600       = ((uint64_t) 1) << 48,
+    QMI_NAS_BAND_PREFERENCE_WCDMA_900        = ((uint64_t) 1) << 49,
+    QMI_NAS_BAND_PREFERENCE_WCDMA_1700_JAPAN = ((uint64_t) 1) << 50,
     /* Bits 51-55 reserved */
-    QMI_NAS_BAND_PREFERENCE_BC_16            = ((guint64) 1) << 56,
-    QMI_NAS_BAND_PREFERENCE_BC_17            = ((guint64) 1) << 57,
-    QMI_NAS_BAND_PREFERENCE_BC_18            = ((guint64) 1) << 58,
-    QMI_NAS_BAND_PREFERENCE_BC_19            = ((guint64) 1) << 59,
-    QMI_NAS_BAND_PREFERENCE_WCDMA_850_JAPAN  = ((guint64) 1) << 60,
-    QMI_NAS_BAND_PREFERENCE_WCDMA_1500       = ((guint64) 1) << 61
+    QMI_NAS_BAND_PREFERENCE_BC_16            = ((uint64_t) 1) << 56,
+    QMI_NAS_BAND_PREFERENCE_BC_17            = ((uint64_t) 1) << 57,
+    QMI_NAS_BAND_PREFERENCE_BC_18            = ((uint64_t) 1) << 58,
+    QMI_NAS_BAND_PREFERENCE_BC_19            = ((uint64_t) 1) << 59,
+    QMI_NAS_BAND_PREFERENCE_WCDMA_850_JAPAN  = ((uint64_t) 1) << 60,
+    QMI_NAS_BAND_PREFERENCE_WCDMA_1500       = ((uint64_t) 1) << 61
     /* Bits 62-63 reserved */
 } QmiNasBandPreference;
 
@@ -198,18 +198,18 @@ typedef enum { /*< since=1.0 >*/
     QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_29 = 1 << 28,
     QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_30 = 1 << 29,
     QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_31 = 1 << 30,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_32 = ((guint64) 1) << 31,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_33 = ((guint64) 1) << 32,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_34 = ((guint64) 1) << 33,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_35 = ((guint64) 1) << 34,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_36 = ((guint64) 1) << 35,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_37 = ((guint64) 1) << 36,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_38 = ((guint64) 1) << 37,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_39 = ((guint64) 1) << 38,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_40 = ((guint64) 1) << 39,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_41 = ((guint64) 1) << 40,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_42 = ((guint64) 1) << 41,
-    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_43 = ((guint64) 1) << 42
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_32 = ((uint64_t) 1) << 31,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_33 = ((uint64_t) 1) << 32,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_34 = ((uint64_t) 1) << 33,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_35 = ((uint64_t) 1) << 34,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_36 = ((uint64_t) 1) << 35,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_37 = ((uint64_t) 1) << 36,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_38 = ((uint64_t) 1) << 37,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_39 = ((uint64_t) 1) << 38,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_40 = ((uint64_t) 1) << 39,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_41 = ((uint64_t) 1) << 40,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_42 = ((uint64_t) 1) << 41,
+    QMI_NAS_LTE_BAND_PREFERENCE_EUTRAN_43 = ((uint64_t) 1) << 42
     /* Bit 43-64 reserved */
 } QmiNasLteBandPreference;
 
